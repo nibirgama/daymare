@@ -24,7 +24,7 @@ process.once('loaded', () => {
     rootPath.pop();
     rootPath = rootPath.join("\\");
     rootPath = rootPath + "\\app.asar.unpacked\\node_modules\\nightmare\\node_modules\\electron\\dist\\electron.exe";
-
+    //comment
     const Nightmare = require('nightmare')
     const nightmare = Nightmare({
         show: true,
