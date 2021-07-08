@@ -1,18 +1,31 @@
 // @ts-nocheck
-const {nightmare} = window
+const { nightmare, rootPath } = window
 
 export class NightmareUtils {
     static loginUser = (username: string, password: string, onDone: () => void) => {
-        console.log("Login")
+
+        console.log("==========================");
+        console.log(rootPath)
+        console.log("==========================");
+
+        console.log("==========================WINDOW");
+        console.log(window)
+        console.log("==========================");
+
+        console.log("==========================Nightmare");
+        console.log(nightmare);
+        console.log("==========================");
         nightmare
             .goto("https://www.linkedin.com/login")
-            .wait(`body`)
-            .type(`input[name="session_key"]`, username)
-            .type(`input[name="session_password"]`, password)
-            .click(`button[class='btn__primary--large from__button--floating']`)
-            .wait(`body`)
+            // .wait(`body`)
+            // .type(`input[name="session_key"]`, username)
+            // .type(`input[name="session_password"]`, password)
+            // .click(`button[class='btn__primary--large from__button--floating']`)
+            // .wait(`body`)
             // .wait(20000)
             .then(() => {
+                // console.log(success);
+
                 onDone()
             })
             .catch((e) => {
