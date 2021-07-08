@@ -8,7 +8,7 @@ export class NightmareUtils {
         console.log(rootPath)
         console.log("==========================");
 
-        console.log("==========================WINDOW");
+        console.log("===========================WINDOW");
         console.log(window)
         console.log("==========================");
 
